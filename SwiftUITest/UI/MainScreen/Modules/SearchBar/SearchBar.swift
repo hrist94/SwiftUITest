@@ -11,29 +11,44 @@ struct SearchBar: View {
     @Binding var text: String
  
     @State private var isEditing = false
+    @FocusState private var fieldIsFocused: Bool
  
     var body: some View {
+        
         HStack {
- 
-            TextField("Search ...", text: $text)
-                .padding(7)
-                .padding(.horizontal, 25)
-                .background(Color(.systemGray6))
-                .cornerRadius(8)
-                .padding(.horizontal, 10)
-                .onTapGesture {
-                    self.isEditing = true
-                }
- 
-            if isEditing {
+            ZStack {
+                RoundedRectangle(cornerRadius: 17, style: .circular)
+                    .fill(Color.white)
+                    .frame(height: 34)
+                
+                HStack(spacing: 6) {
+                    Spacer()
+                        .frame(width: 18)
+                    Image("Search")
+                        .foregroundColor(Color("FF6E4E"))
+                    TextField("Search", text: $text)
+                        .padding(.all, 5)
+                        .background(Color(.clear))
+                        .cornerRadius(8)
+                        .onTapGesture {
+                            self.isEditing = true
+                        }
+                        .focused($fieldIsFocused)
+                    }
+            }
+            Spacer()
+                .frame(width: 11)
+            ZStack {
+                Circle()
+                    .frame(width: 34, height: 34, alignment: .center)
+                    .foregroundColor(Color("FF6E4E"))
                 Button(action: {
-                    self.isEditing = false
-                    self.text = ""
- 
+                    print("123")
+                    fieldIsFocused = false
                 }) {
-                    Text("Cancel")
+                    Image("QRcode")
+                        .foregroundColor(Color.white)
                 }
-                .padding(.trailing, 10)
             }
         }
     }

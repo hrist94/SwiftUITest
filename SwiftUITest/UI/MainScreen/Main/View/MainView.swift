@@ -10,13 +10,18 @@ import SwiftUI
 struct MainView: View {
     @State var text: String = ""
     
+    
     var body: some View {
-        VStack {
-            LocationPopUpView()
-            
+      
+        ZStack {
+            Color("E5E5E5")
+                .ignoresSafeArea(.all)
+            VStack {
+                LocationPopUpView()
+                SearchBar(text: $text)
+                    .padding(.horizontal, 32)
+            }
         }
-        
-        
     }
 }
 
