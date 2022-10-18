@@ -12,14 +12,21 @@ struct MainView: View {
     
     
     var body: some View {
-      
         ZStack {
             Color("E5E5E5")
                 .ignoresSafeArea(.all)
+            
             VStack {
                 LocationPopUpView()
+                    .padding(.top)
+                Spacer()
+                    .frame(height: 18)
+                Category()
+                Spacer()
+                    .frame(height: 50)
                 SearchBar(text: $text)
                     .padding(.horizontal, 32)
+                Spacer()
             }
         }
     }
