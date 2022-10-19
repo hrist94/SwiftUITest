@@ -23,6 +23,7 @@ struct Category: View {
                 Text("Select Category")
                     .bold()
                     .font(Font(CTFont(.system, size: 25)))
+                    .foregroundColor(.black)
                     .padding(.leading, 17)
                 Spacer()
                 Button {
@@ -37,18 +38,19 @@ struct Category: View {
             Spacer()
                 .frame(height: 24)
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 23) {
-                    ForEach(0..<10) {_ in
-                        ZStack {
-                            Circle()
-                                .frame(width: 71, height: 71)
-                                .foregroundColor(Color("FF6E4E"))
-                        }
+                LazyHGrid(rows: rows, spacing: 23) {
+                    ForEach(0..<8) {_ in
+                        Circle()
+                            .foregroundColor(Color("FF6E4E"))
                     }
                 }
+                .padding(.horizontal, 27)
             }
         }
     }
+    private var rows: [GridItem] = [
+        GridItem(.fixed(75), spacing: 23, alignment: .center)
+    ]
 }
 
 struct Category_Previews: PreviewProvider {

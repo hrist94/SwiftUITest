@@ -15,6 +15,7 @@ struct LocationPopUpView: View {
                 .foregroundColor(Color("FF6E4E"))
                 .frame(width: 12, height: 15, alignment: .center)
             Text("Zihuatanejo, Gro")
+                .foregroundColor(Color.black)
             Image("PopUp")
                 .resizable()
                 .frame(width: 10, height: 5, alignment: .center)

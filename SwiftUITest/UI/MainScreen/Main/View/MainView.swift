@@ -15,18 +15,25 @@ struct MainView: View {
         ZStack {
             Color("E5E5E5")
                 .ignoresSafeArea(.all)
-            
-            VStack {
-                LocationPopUpView()
-                    .padding(.top)
-                Spacer()
-                    .frame(height: 18)
-                Category()
-                Spacer()
-                    .frame(height: 50)
-                SearchBar(text: $text)
-                    .padding(.horizontal, 32)
-                Spacer()
+            ScrollView(.vertical, showsIndicators: false) {
+                VStack {
+                    LocationPopUpView()
+                        .padding(.top)
+                    Spacer()
+                        .frame(height: 18)
+                    Category()
+                    Spacer()
+                        .frame(height: 50)
+                    SearchBar(text: $text)
+                        .padding(.horizontal, 32)
+                    Spacer()
+                        .frame(height: 24)
+                    HotSales()
+                    Spacer()
+                        .frame(height: 24)
+                    BestSeller()
+                    Spacer()
+                }
             }
         }
     }

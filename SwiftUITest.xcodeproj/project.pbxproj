@@ -16,6 +16,8 @@
 		2E5B18B528FEEF4F00E1A467 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5B18B428FEEF4F00E1A467 /* Colors.xcassets */; };
 		2E5B18B928FF0C7D00E1A467 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B18B828FF0C7D00E1A467 /* Category.swift */; };
 		2E5B18BD28FF148100E1A467 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5B18BC28FF148100E1A467 /* CategoryModel.swift */; };
+		2E6AB01F290040B600E262D6 /* HotSales.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AB01E290040B600E262D6 /* HotSales.swift */; };
+		2E6AB0222900455200E262D6 /* BestSeller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6AB0212900455200E262D6 /* BestSeller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		2E5B18B428FEEF4F00E1A467 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		2E5B18B828FF0C7D00E1A467 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		2E5B18BC28FF148100E1A467 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		2E6AB01E290040B600E262D6 /* HotSales.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotSales.swift; sourceTree = "<group>"; };
+		2E6AB0212900455200E262D6 /* BestSeller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSeller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 		2E5B18A628FEE6B000E1A467 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2E6AB0202900454100E262D6 /* BestSeller */,
+				2E6AB01D290040A200E262D6 /* HotSales */,
 				2E5B18B728FF0C5100E1A467 /* Category */,
 				2E5B18B028FEEEBB00E1A467 /* LocationPopUpView */,
 				2E5B18AB28FEE96D00E1A467 /* SearchBar */,
@@ -202,6 +208,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		2E6AB01D290040A200E262D6 /* HotSales */ = {
+			isa = PBXGroup;
+			children = (
+				2E6AB01E290040B600E262D6 /* HotSales.swift */,
+			);
+			path = HotSales;
+			sourceTree = "<group>";
+		};
+		2E6AB0202900454100E262D6 /* BestSeller */ = {
+			isa = PBXGroup;
+			children = (
+				2E6AB0212900455200E262D6 /* BestSeller.swift */,
+			);
+			path = BestSeller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E6AB0222900455200E262D6 /* BestSeller.swift in Sources */,
 				2E5B189728FEDAB600E1A467 /* MainView.swift in Sources */,
+				2E6AB01F290040B600E262D6 /* HotSales.swift in Sources */,
 				2E5B18BD28FF148100E1A467 /* CategoryModel.swift in Sources */,
 				2E5B18B928FF0C7D00E1A467 /* Category.swift in Sources */,
 				2E5B189528FEDAB600E1A467 /* SwiftUITestApp.swift in Sources */,

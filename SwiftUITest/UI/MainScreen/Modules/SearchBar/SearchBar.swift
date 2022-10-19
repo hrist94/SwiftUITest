@@ -27,8 +27,8 @@ struct SearchBar: View {
                     Image("Search")
                         .foregroundColor(Color("FF6E4E"))
                     TextField("Search", text: $text)
+                        .foregroundColor(Color.black)
                         .padding(.all, 5)
-                        .background(Color(.clear))
                         .cornerRadius(8)
                         .onTapGesture {
                             self.isEditing = true
