@@ -35,6 +35,7 @@ struct BestSeller: View {
                 }
             }
             .padding(.horizontal, 17)
+            .shadow(color: .gray, radius: 5, x: 0, y: 0)
         }
     }
     private var columns: [GridItem] = [

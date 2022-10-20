@@ -38,7 +38,7 @@ struct HotSales: View {
             }
             .frame(height: 182)
             .tabViewStyle(.page(indexDisplayMode: .never))
-            
+            .shadow(color: .gray, radius: 5, x: 0, y: 0)
         }
     }
     private var rows: [GridItem] = [

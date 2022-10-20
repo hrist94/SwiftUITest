@@ -11,11 +11,10 @@ struct Category: View {
     var categories: [CategoryModel] = [CategoryModel(name: "Phones", image: UIImage(named: "Phone")!),
                                        CategoryModel(name: "Computer", image: UIImage(named: "PC")!),
                                        CategoryModel(name: "Health", image: UIImage(named: "Health")!),
-                                       CategoryModel(name: "Books", image: UIImage(named: "Book")!),CategoryModel(name: "Phones", image: UIImage(named: "Phone")!),
-                                       CategoryModel(name: "Computer", image: UIImage(named: "PC")!),
-                                       CategoryModel(name: "Health", image: UIImage(named: "Health")!),
-                                       CategoryModel(name: "Books", image: UIImage(named: "Book")!)
+                                       CategoryModel(name: "Books", image: UIImage(named: "Book")!),
+                                       CategoryModel(name: "Test", image: UIImage(named:"Phone")!)
                                        ]
+    @State var selectedItem: String?
     
     var body: some View {
         VStack {
@@ -39,18 +38,28 @@ struct Category: View {
                 .frame(height: 24)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: rows, spacing: 23) {
-                    ForEach(0..<8) {_ in
-                        Circle()
-                            .foregroundColor(Color("FF6E4E"))
+                    ForEach(categories, id: \.name) {category in
+                        CategoryCellView(name: category.name, image: category.image)
+                            .onTapGesture {
+                                selectedItem = category.name
+                            }
+                            .colorMultiply(self.selectedItem == category.name ? Color("FF6E4E") : Color.white)
                     }
                 }
                 .padding(.horizontal, 27)
+                .frame(height: 110)
             }
         }
     }
     private var rows: [GridItem] = [
         GridItem(.fixed(75), spacing: 23, alignment: .center)
     ]
+}
+
+extension Category {
+    private func configure(name: String, image: UIImage) {
+        
+    }
 }
 
 struct Category_Previews: PreviewProvider {

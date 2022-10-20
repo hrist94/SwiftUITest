@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
-    @State var text: String = ""
     
+    @State var text: String = ""
     
     var body: some View {
         ZStack {
